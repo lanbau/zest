@@ -40,29 +40,31 @@
 				}
 				$jsonarr = json_encode($emptyarray);
 				// echo $jsonarr;
-				echo'<table class="table table-striped">';
-				echo'<tr>'; 
-			    echo'<td>'. "id" ."</td>";
-			    echo'<td>'. "name" .'</td>';
-			    echo'<td>'. "day" .'</td>';
-			    echo'<td>'. "start_time" .'</td>';
-			    echo'<td>'. "end_time" .'</td>';
-			    echo'<td>'. "start_date" .'</td>';
-			    echo'<td>'. "end_date" .'</td>';
-			    echo'<tr>';
+				echo '<div class="table-responsive">';
+				echo '<table class="table table-striped">';
+				echo '<tr>'; 
+			    echo '<td>'. "id" ."</td>";
+			    echo '<td>'. "name" .'</td>';
+			    echo '<td>'. "day" .'</td>';
+			    echo '<td>'. "start_time" .'</td>';
+			    echo '<td>'. "end_time" .'</td>';
+			    echo '<td>'. "start_date" .'</td>';
+			    echo '<td>'. "end_date" .'</td>';
+			    echo '<tr>';
 
 				foreach ($emptyarray as $URL){
-			        echo'<tr>'; 
-			        echo'<td>'. $URL['id']."</td>";
-			        echo'<td>'. $URL['name'].'</td>';
-			        echo'<td>'. $URL['day'].'</td>';
-			        echo'<td>'. $URL['start_time'].'</td>';
-			        echo'<td>'. $URL['end_time'].'</td>';
-			        echo'<td>'. $URL['start_date'].'</td>';
-			        echo'<td>'. $URL['end_date'].'</td>';
-			        echo'<tr>';
+			        echo '<tr>'; 
+			        echo '<td>'. $URL['id']."</td>";
+			        echo '<td>'. $URL['name'].'</td>';
+			        echo '<td>'. $URL['day'].'</td>';
+			        echo '<td>'. $URL['start_time'].'</td>';
+			        echo '<td>'. $URL['end_time'].'</td>';
+			        echo '<td>'. $URL['start_date'].'</td>';
+			        echo '<td>'. $URL['end_date'].'</td>';
+			        echo '<tr>';
 			    }
-			    echo'</table>';
+			    echo '</table>';
+			    echo '</div>';
 			?>
         </div>
         <div class="modal-footer">
