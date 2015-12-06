@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+		table, th, td {
+   			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
 <?php
@@ -15,7 +20,30 @@
 	    $emptyarray[] = $row;
 	}
 	$jsonarr = json_encode($emptyarray);
-	echo $jsonarr;
+	// echo $jsonarr;
+	echo'<table>';
+	echo'<tr>'; 
+    echo'<td>'. "id" ."</td>";
+    echo'<td>'. "name" .'</td>';
+    echo'<td>'. "day" .'</td>';
+    echo'<td>'. "start_time" .'</td>';
+    echo'<td>'. "end_time" .'</td>';
+    echo'<td>'. "start_date" .'</td>';
+    echo'<td>'. "end_date" .'</td>';
+    echo'<tr>';
+
+	foreach ($emptyarray as $URL){
+        echo'<tr>'; 
+        echo'<td>'. $URL['id']."</td>";
+        echo'<td>'. $URL['name'].'</td>';
+        echo'<td>'. $URL['day'].'</td>';
+        echo'<td>'. $URL['start_time'].'</td>';
+        echo'<td>'. $URL['end_time'].'</td>';
+        echo'<td>'. $URL['start_date'].'</td>';
+        echo'<td>'. $URL['end_date'].'</td>';
+        echo'<tr>';
+    }
+    echo'</table>';
 ?>
 <script type="text/javascript">
 	var ar = <?php echo $jsonarr; ?>
